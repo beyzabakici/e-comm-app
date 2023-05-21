@@ -3,12 +3,14 @@ import { View, Text } from "react-native";
 import styles from "./styles";
 import { ProductSearch } from "../../../../components";
 
-type Props = {};
+type Props = {
+  onSearch: (...args: any[]) => void;
+};
 
-const Header: React.FC<Props> = () => {
+const Header: React.FC<Props> = ({onSearch}) => {
   return (
     <View style={styles.container}>
-      <ProductSearch onSearch={(searchText) => console.log(searchText)} />
+      <ProductSearch onSearch={onSearch} />
     </View>
   );
 };

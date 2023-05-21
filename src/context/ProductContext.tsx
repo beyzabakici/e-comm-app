@@ -22,7 +22,7 @@ const ProductProvider = ({ children }: ProductProviderProps) => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    fetchProducts.then((response) => setProducts(response.data.products));
+    fetchProducts().then((response) => setProducts(response.data.products));
   }, []);
 
   return (
