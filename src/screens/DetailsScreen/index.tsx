@@ -9,7 +9,7 @@ import {
   View,
 } from "react-native";
 import styles from "./styles";
-import { ProductVote } from "../../components";
+import { ProductSlider, ProductVote } from "../../components";
 import { Ionicons } from "@expo/vector-icons";
 import { Footer } from "./screenComponents";
 import { screenWidth } from "../../utils";
@@ -40,7 +40,11 @@ const DetailsScreen: React.FC<Props> = ({ route, navigation }) => {
         <Ionicons name={"chevron-back"} style={styles.backIcon} />
       </TouchableOpacity>
       <ScrollView>
-        <Image style={styles.image} source={{ uri: thumbnail }} />
+        {images ? (
+         <ProductSlider images={images} />
+        ) : (
+          <Image style={styles.image} source={{ uri: thumbnail }} />
+        )}
         <Text style={styles.title} ellipsizeMode="tail" numberOfLines={2}>
           <Text style={{ ...styles.title, ...styles.bold }}>{title}</Text>
           {description}

@@ -3,8 +3,8 @@ import { colors, screenHeight, screenWidth } from "../../../../utils";
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom: '2%',
-    height: screenHeight * 0.10,
+    paddingBottom: "2%",
+    height: screenHeight * 0.1,
     width: screenWidth,
     backgroundColor: colors.white,
     shadowColor: colors.black,
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     width: "50%",
     borderRadius: 50,
     alignItems: "center",
+    justifyContent: "center",
   },
   buttonText: {
     fontSize: 16,
