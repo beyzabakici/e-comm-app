@@ -12,7 +12,6 @@ import styles from "./styles";
 import { ProductSlider, ProductVote } from "../../components";
 import { Ionicons } from "@expo/vector-icons";
 import { Footer } from "./screenComponents";
-import { screenWidth } from "../../utils";
 
 type Props = {
   route: any;

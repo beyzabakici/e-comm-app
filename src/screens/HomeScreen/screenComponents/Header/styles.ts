@@ -3,6 +3,7 @@ import { colors, screenWidth } from "../../../../utils";
 
 const styles = StyleSheet.create({
   container: {
+    paddingBottom: '1%',
     width: screenWidth,
     backgroundColor: colors.white,
     shadowColor: colors.black,
@@ -10,6 +11,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 1,
     elevation: 4,
+  },
+  categoryButton: {
+    width: screenWidth * 0.25,
+  },
+  buttonArea: {
+    marginHorizontal: '2%',
+    flexDirection: "row",
+    alignItems: "center",
   },
 });
 
