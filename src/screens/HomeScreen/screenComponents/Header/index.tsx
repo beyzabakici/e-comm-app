@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import styles from "./styles";
 import { ProductFilterButton, ProductSearch } from "../../../../components";
 
@@ -21,19 +21,14 @@ const Header: React.FC<Props> = ({
   return (
     <View style={styles.container}>
       <ProductSearch onSearch={onSearch} />
-      <View style={styles.buttonArea}>
+      <ScrollView horizontal>
         <ProductFilterButton
           onPress={() => handleCategoryModal()}
           filterName={categoryFilter}
-          style={styles.categoryButton}
         />
-        <ProductFilterButton
-          filterName={rateFilter}
-        />
-        <ProductFilterButton
-          filterName={priceFilter}
-        />
-      </View>
+        <ProductFilterButton filterName={priceFilter} />
+        <ProductFilterButton filterName={rateFilter} />
+      </ScrollView>
     </View>
   );
 };
