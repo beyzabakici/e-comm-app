@@ -5,15 +5,15 @@ import { colors, screenHeight, screenWidth } from "../../../../utils";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-end',
+    alignItems: "center",
+    justifyContent: "flex-end",
   },
   innerContainer: {
     backgroundColor: Colors.white,
     width: screenWidth,
     height: screenHeight * 0.8,
-    alignItems: 'flex-start',
-    paddingHorizontal: '1%',
+    alignItems: "flex-start",
+    paddingHorizontal: "1%",
     borderTopRightRadius: 25,
     borderTopLeftRadius: 25,
   },
@@ -32,19 +32,34 @@ const styles = StyleSheet.create({
   },
   selectItem: {
     fontSize: 16,
-    color:  colors.darkGary,
+    color: colors.darkGary,
   },
   selectItemText: {
     fontSize: 16,
-    fontWeight: '600',
-    color:  colors.darkGary,
+    fontWeight: "600",
+    color: colors.darkGary,
   },
   selectItemArea: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginVertical: '1%',
-    paddingHorizontal: '3%'
-  }
+    flexDirection: "row",
+    alignItems: "center",
+    marginVertical: "1%",
+    paddingHorizontal: "3%",
+  },
+  button: {
+    alignSelf: 'center',
+    marginBottom: 10,
+    backgroundColor: colors.black,
+    padding: "3%",
+    width: "50%",
+    borderRadius: 50,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  buttonText: {
+    fontSize: 16,
+    color: colors.white,
+    fontWeight: "500",
+  },
 });
 
 export default styles;

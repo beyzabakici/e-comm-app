@@ -56,6 +56,12 @@ const FilterModal: React.FC<Props> = ({
           )}
           horizontal={false}
         />
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => setSelectedOption(undefined)}
+        >
+          <Text style={styles.buttonText}>Temizle</Text>
+        </TouchableOpacity>
       </View>
     </Modal>
   );

@@ -24,7 +24,7 @@ const Header: React.FC<Props> = ({
       <ScrollView horizontal>
         <ProductFilterButton
           onPress={() => handleCategoryModal()}
-          filterName={categoryFilter}
+          filterName={categoryFilter ?? "Kategori"}
         />
         <ProductFilterButton filterName={priceFilter} />
         <ProductFilterButton filterName={rateFilter} />
