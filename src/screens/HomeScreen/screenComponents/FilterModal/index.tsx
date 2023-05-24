@@ -48,7 +48,7 @@ const FilterModal: React.FC<Props> = ({
                     ? "radio-button-on"
                     : "radio-button-off"
                 }
-                style={styles.backIcon}
+                style={styles.icon}
               />
 
               <Text style={styles.selectItemText}>{item}</Text>

@@ -13,16 +13,22 @@ const styles = StyleSheet.create({
     width: screenWidth,
     height: screenHeight * 0.8,
     alignItems: 'flex-start',
-    paddingHorizontal: '1%'
+    paddingHorizontal: '1%',
+    borderTopRightRadius: 25,
+    borderTopLeftRadius: 25,
   },
   backIcon: {
     color: colors.darkGary,
-    fontSize: 20,
+    fontSize: 25,
   },
   iconArea: {
     marginTop: "2%",
     flex: 1,
     zIndex: 1000,
+  },
+  icon: {
+    color: colors.darkGary,
+    fontSize: 20,
   },
   selectItem: {
     fontSize: 16,
