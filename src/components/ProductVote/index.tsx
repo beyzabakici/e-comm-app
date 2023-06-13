@@ -10,19 +10,17 @@ type Props = {
 
 const ProductVote: React.FC<Props> = ({ vote, fullVote = 5 }) => {
   const renderStars = () => {
-    const stars = [];
-    const ratio = fullVote / vote; 
+    const ratio = fullVote / vote;
 
-    for (let i = 0; i < fullVote; i++) {
-      stars.push(
+    return Array(fullVote)
+      .fill(null)
+      .map((_, i) => (
         <Ionicons
           key={i}
           name={i < ratio ? "star" : "star-outline"}
           style={styles.starIcon}
         />
-      );
-    }
-    return stars;
+      ));
   };
 
   return <View style={styles.container}>{renderStars()}</View>;

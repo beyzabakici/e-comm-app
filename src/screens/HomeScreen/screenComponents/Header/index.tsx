@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { ScrollView, View } from "react-native";
 import styles from "./styles";
 import { ProductFilterButton, ProductSearch } from "../../../../components";
 
 type Props = {
-  onSearch: (...args: any[]) => void;
+  onSearch: (string) => void;
   categoryFilter: string;
-  handleCategoryModal: (...args: any[]) => void;
+  handleCategoryModal: () => void;
   rateFilter: string;
   priceFilter: string;
 };

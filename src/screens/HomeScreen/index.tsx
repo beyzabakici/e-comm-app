@@ -9,10 +9,13 @@ import {
   searchProducts as searchProductsService,
   searchProductsWithCategory as searchProductsWithCategoryService,
 } from "../../services";
+import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
+type RootStackParamList = {
+  Home: undefined;
+};
 type Props = {
-  navigation: any;
-  x;
+  navigation: NativeStackNavigationProp<RootStackParamList, "Home">;
 };
 
 const HomeScreen: React.FC<Props> = ({ navigation }) => {
@@ -24,7 +27,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
   const [isVisibleCategoryModal, setVisibleCategoryModal] =
     useState<boolean>(false);
 
-  const searchProducts = (query) =>
+  const searchProducts = (query: string) =>
     searchProductsService(query).then((resp) => setData(resp.data.products));
 
   const handleCategoryModal = () => {

@@ -15,7 +15,7 @@ const ProductCard: React.FC<Props> = ({ product, navigation }) => {
   const goToDetails = () => {
     navigation.navigate("Details", { product: product });
   };
-
+  
   return (
     <TouchableOpacity style={styles.container} onPress={goToDetails}>
       <Image style={styles.image} source={{ uri: thumbnail }} />
